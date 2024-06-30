@@ -70,7 +70,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
       return;
     }
 
-    // price lowest domination of 100 = 100pence == 1GBP
+    // price lowest domination of 100 = 100paisa == 1INR
     const deliveryPriceFormatted = parseInt(
       (restaurant.deliveryPrice / 100).toFixed(2)
     );
