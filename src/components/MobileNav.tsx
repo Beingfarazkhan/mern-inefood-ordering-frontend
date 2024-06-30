@@ -27,7 +27,7 @@ const MobileNav = () => {
               {user?.given_name } { user?.family_name}
             </span>
           ) : (
-            <span> Welcome to MernEats.com!</span>
+            <span> Welcome to INEFood!</span>
           )}
         </SheetTitle>
         <Separator />
