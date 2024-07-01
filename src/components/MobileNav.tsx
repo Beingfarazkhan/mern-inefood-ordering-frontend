@@ -10,6 +10,12 @@ import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { useAuth0 } from "@auth0/auth0-react";
 import MobileNavLinks from "./MobileNavLinks";
+import { Link, LinkProps } from 'react-router-dom';
+
+interface ScrollLinkProps extends Omit<LinkProps, 'to'> {
+  to: string;
+  children: React.ReactNode;
+}
 
 const MobileNav = () => {
   const { isAuthenticated, loginWithRedirect, user } = useAuth0();
@@ -32,6 +38,15 @@ const MobileNav = () => {
         </SheetTitle>
         <Separator />
         <SheetDescription className="flex flex-col gap-4">
+        <Link to="/" className="font-bold hover:text-green-500">
+            Home
+          </Link>
+        <ScrollLink to="about" className="font-bold hover:text-green-500">
+            About
+          </ScrollLink>
+        <ScrollLink to="contact" className="font-bold hover:text-green-500">
+            Contact
+          </ScrollLink>
           {isAuthenticated ? (
             <MobileNavLinks />
           ) : (
@@ -49,3 +64,19 @@ const MobileNav = () => {
 };
 
 export default MobileNav;
+
+const ScrollLink: React.FC<ScrollLinkProps> = ({ to, children, ...props }) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const element = document.getElementById(to);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <Link to={`#${to}`} onClick={handleClick} {...props}>
+      {children}
+    </Link>
+  );
+};

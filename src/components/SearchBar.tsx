@@ -7,6 +7,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useEffect } from "react";
 
+
 const formSchema = z.object({
   searchQuery: z.string({
     required_error: "Restaurant name is required",
@@ -23,6 +24,7 @@ type Props = {
 };
 
 const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
+  
   const form = useForm<SearchForm>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -85,6 +87,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
           Search
         </Button>
       </form>
+
     </Form>
   );
 };

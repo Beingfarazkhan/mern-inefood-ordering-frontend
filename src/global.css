@@ -2,6 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'dynamic-trooper';
+  src: url('../public/DynamicTrooper.otf');
+}
+
+@font-face {
+  font-family: 'super-corn';
+  src: url('../public/SuperCorn-X3xGg.ttf');
+}
+@font-face {
+  font-family: 'super-charge';
+  src: url('../public/Supercharge.otf');
+}
+@font-face {
+  font-family: 'super-charge-outline';
+  src: url('../public/SuperchargeOutline.otf');
+}
+@font-face {
+  font-family: 'polaris';
+  src: url('../public/Polaris.otf');
+}
+@font-face {
+  font-family: 'technovier';
+  src: url('../public/Technovier.otf');
+}
+@font-face {
+  font-family: 'super-normal';
+  src: url('../public/SuperNormal.ttf');
+}
+
+.super-normal{
+  font-family: 'super-normal';
+  font-weight: normal;
+    letter-spacing: 1.5px;
+}
+
+.trooper{
+  font-family: 'dynamic-trooper';
+  font-weight: normal;
+    letter-spacing: 1.5px;
+}
+.polaris{
+  font-family: 'polaris';
+  /* font-weight: normal;
+    letter-spacing: 1.5px; */
+}
+.technovier{
+  font-family: 'technovier';
+  /* font-weight: normal;
+    letter-spacing: 1.5px; */
+}
+
+.supercharge{
+  font-family: 'super-charge';
+
+}
+
+.supercharge-outline{
+  font-family: 'super-charge-outline';
+}
+
+.supercorn{
+  font-family: 'super-corn';
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: normal;
+}
  
 @layer base {
   :root {
