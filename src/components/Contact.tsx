@@ -1,5 +1,4 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import cubeLeg from "../assets/cube-leg.png";
 // import { Player } from '@lordicon/react';
 import { Player } from '@lottiefiles/react-lottie-player';
 // import ICON from '../assets/email.json';

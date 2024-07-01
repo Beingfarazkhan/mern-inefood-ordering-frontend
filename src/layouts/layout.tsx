@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 // import Hero from "@/components/Hero";
-import NewHero from "@/components/NewHero";
+import NewHero from "../components/newHero";
 import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 
